@@ -1,16 +1,22 @@
 // 订单
 <template>
     <div>
-        <nav-header/>
+        <order-header/>
         <!-- index嵌套在router-view里面 -->
         <router-view/>
-        <nav-footer/>
+        <order-footer/>
     </div>
 </template>
 
 <script>
+import OrderHeader from '../components/OrderHeader'
+import OrderFooter from '../components/OrderFooter'
+
 export default {
-    
+    name: 'order',
+    components: {
+        OrderHeader,OrderFooter
+    }
 }
 </script>
 
