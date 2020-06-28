@@ -4,6 +4,23 @@
   </div>
 </template>
 
+<script>
+import storage from './storage/index'
+export default {
+  mounted(){
+    // 给user添加属性值  对象
+    // storage.setItem("user",{username: '小明'})
+
+    // 给user对象,添加属性值 abc : {a: 5}
+    // storage.setItem("abc",{a:5},'user')
+    // storage.setItem("b",2)
+    
+    // user对象里面的 属性
+    storage.clear("username","user")
+  }
+}
+</script>
+
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;

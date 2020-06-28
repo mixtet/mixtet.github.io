@@ -9,7 +9,7 @@ Vue.use(VueRouter)
     path: '/',
     name: 'home',
     component: () => import('../pages/home.vue'),
-    redirect: 'index', //重定向
+    // redirect: 'index', //重定向
     // 子路由
     children:[
       // 首页的index
@@ -66,11 +66,16 @@ Vue.use(VueRouter)
         component: () =>import('../pages/alipay.vue')
       }
     ]
-  }
+  },
+  {
+    path: '/login',
+    name: 'login',
+    component: () =>import('../pages/login.vue')
+  },
 ]
 
 const router = new VueRouter({
-  mode: 'history',
+  // mode: 'history',//注释掉这个就是hash路由,没有注释掉就不是hash路由
   base: process.env.BASE_URL,
   routes
 })
