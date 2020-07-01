@@ -16,7 +16,20 @@ export default {
     // storage.setItem("b",2)
     
     // user对象里面的 属性
-    storage.clear("username","user")
+    // storage.clear("username","user")
+
+
+    // json请求 本地加载请求静态json文件的形式
+    // this.axios.get('/mock/user/login.json').then((res) =>{
+    //   this.res = res;
+    // })
+
+    // 通过easy-mock平台实现数据mock
+    this.axios.get('/mock/user/login.json').then((res) =>{
+      this.res = res;
+    })
+    
+
   }
 }
 </script>
