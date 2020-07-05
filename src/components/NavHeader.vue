@@ -1,6 +1,6 @@
 <template>
     <div>
-        头部
+        header
     </div>
 </template>
 

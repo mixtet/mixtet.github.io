@@ -7,6 +7,11 @@
 <script>
 import storage from './storage/index'
 export default {
+  data(){
+    return{
+      res:{}
+    }
+  },
   mounted(){
     // 给user添加属性值  对象
     // storage.setItem("user",{username: '小明'})
@@ -25,10 +30,11 @@ export default {
     // })
 
     // 通过easy-mock平台实现数据mock
-    this.axios.get('/mock/user/login.json').then((res) =>{
-      this.res = res;
-    })
-    
+    // 安装了vue-axios 已经把axios挂载在实例上, 使用this.axios就可以调用
+    // this.axios.get('/user/login').then((res) =>{
+    //   this.res = res;
+    // })
+
 
   }
 }

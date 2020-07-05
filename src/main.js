@@ -9,10 +9,17 @@ import store from './store'
 // import env from './env'
 
 // 根据前端的跨域方式做调整, 前端域名
-// axios.defaults.baseURL = '/api';  //域名一样 /api  /api/a/b  => /a/b  会忽略api接口代理
+axios.defaults.baseURL = '/api';  //域名一样 /api  /api/a/b  => /a/b  会忽略api接口代理
 axios.defaults.timeout = 5000;
 
 // axios.defaults.baseURL = env.baseURL;
+
+
+const mock = true;
+if(mock){
+  require('./mock/api')
+}
+
 
 // 拦截器  拦截代码
 // request 针对用户请求,表单值,时间戳,使用config取里面的参数  统一处理
